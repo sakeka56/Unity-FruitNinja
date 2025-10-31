@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "FruitNinja_IAS",
+    "maps": [
+        {
+            "name": "Default",
+            "id": "2b0b50ca-f3cb-4747-ba8e-5a61fd936159",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "fdebfa33-d67e-4787-a106-16985fb8d316",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "InteractPosition",
+                    "type": "Value",
+                    "id": "a25f00fe-5988-45e6-b2b1-59a9aa552dc3",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f5aa57bf-6f4d-40ad-a6cb-6c3421666c7d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1a125888-03fd-44e1-8686-a252c6a0c8bc",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InteractPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
