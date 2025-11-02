@@ -412,12 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10dd92b064ec17948b62e064af2ebec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  spawnableObjects:
-  - {fileID: 5279534676263679986, guid: ef7370ab03ee3694dace69de71f7a247, type: 3}
-  - {fileID: 6104471475602763961, guid: 8e9dec7a00798584d89a9a61700f57fe, type: 3}
-  - {fileID: 7845168532104395746, guid: d18d02a2ee79c9d4ea1ff34ebef8c2b6, type: 3}
-  - {fileID: 7674196398654854225, guid: 4ca65bcd6f62a234089410371a3ad813, type: 3}
-  - {fileID: 8428806436309670769, guid: b146b49fca2877c49994af0398e8f895, type: 3}
+  fruitTypesToSpawn: 000000000100000002000000030000000400000005000000
   left: -0.2
   right: 0.2
   SpawnMinSpeed: 14
@@ -432,12 +427,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709076000}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: -10, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -19.49339, y: 5.3, z: -6.36192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1538041458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
@@ -517,12 +512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10dd92b064ec17948b62e064af2ebec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  spawnableObjects:
-  - {fileID: 5279534676263679986, guid: ef7370ab03ee3694dace69de71f7a247, type: 3}
-  - {fileID: 6104471475602763961, guid: 8e9dec7a00798584d89a9a61700f57fe, type: 3}
-  - {fileID: 7845168532104395746, guid: d18d02a2ee79c9d4ea1ff34ebef8c2b6, type: 3}
-  - {fileID: 7674196398654854225, guid: 4ca65bcd6f62a234089410371a3ad813, type: 3}
-  - {fileID: 8428806436309670769, guid: b146b49fca2877c49994af0398e8f895, type: 3}
+  fruitTypesToSpawn: 000000000100000002000000030000000400000005000000
   left: -0.2
   right: 0.2
   SpawnMinSpeed: 14
@@ -537,12 +527,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010172565}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: -10, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.49339, y: 5.3, z: -6.36192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1538041458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1145852093
 GameObject:
@@ -555,6 +545,7 @@ GameObject:
   - component: {fileID: 1145852095}
   - component: {fileID: 1145852094}
   - component: {fileID: 1145852096}
+  - component: {fileID: 1145852097}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -611,7 +602,31 @@ MonoBehaviour:
   isOverInstance: 0
   OnSceneChangedDestroy: 1
   OnAwakeInit: 1
+  FPS: 60
   WinScore: 20
+--- !u!114 &1145852097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145852093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bcaa5250daf0b49b0149a6296ef0bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPoolManager
+  isOverInstance: 0
+  OnSceneChangedDestroy: 1
+  OnAwakeInit: 1
+  prefabList:
+  - {fileID: 5279534676263679986, guid: ef7370ab03ee3694dace69de71f7a247, type: 3}
+  - {fileID: 6104471475602763961, guid: 8e9dec7a00798584d89a9a61700f57fe, type: 3}
+  - {fileID: 7845168532104395746, guid: d18d02a2ee79c9d4ea1ff34ebef8c2b6, type: 3}
+  - {fileID: 7674196398654854225, guid: 4ca65bcd6f62a234089410371a3ad813, type: 3}
+  - {fileID: 8428806436309670769, guid: b146b49fca2877c49994af0398e8f895, type: 3}
+  - {fileID: 4473449225418355192, guid: c8eafb37041b41c45bcc6a8be84a1bbf, type: 3}
+  ParentTransform: {fileID: 2020587052}
 --- !u!1 &1534414583
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,6 +908,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1538041457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1538041458}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1538041458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538041457}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.49339, y: -15.3, z: 6.36192}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1747056948}
+  - {fileID: 709076002}
+  - {fileID: 1010172567}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1747056947
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,12 +967,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747056947}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.49339, y: 5.3, z: -6.36192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1538041458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1747056949
 MonoBehaviour:
@@ -937,12 +986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10dd92b064ec17948b62e064af2ebec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  spawnableObjects:
-  - {fileID: 5279534676263679986, guid: ef7370ab03ee3694dace69de71f7a247, type: 3}
-  - {fileID: 6104471475602763961, guid: 8e9dec7a00798584d89a9a61700f57fe, type: 3}
-  - {fileID: 7845168532104395746, guid: d18d02a2ee79c9d4ea1ff34ebef8c2b6, type: 3}
-  - {fileID: 7674196398654854225, guid: 4ca65bcd6f62a234089410371a3ad813, type: 3}
-  - {fileID: 8428806436309670769, guid: b146b49fca2877c49994af0398e8f895, type: 3}
+  fruitTypesToSpawn: 000000000100000002000000030000000400000005000000
   left: -0.2
   right: 0.2
   SpawnMinSpeed: 14
@@ -1070,8 +1114,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -15.3, z: 0}
-  m_LocalScale: {x: 5.6257, y: 5.6257, z: 5.6257}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 12.55, y: 12.55, z: 12.55}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1102,6 +1146,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &2020587051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2020587052}
+  m_Layer: 0
+  m_Name: ObjectPoolParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2020587052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020587051}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.49339, y: -15.3, z: 6.36192}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2125553708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1277,6 @@ SceneRoots:
   - {fileID: 2125553710}
   - {fileID: 1534414588}
   - {fileID: 1145852095}
-  - {fileID: 1747056948}
-  - {fileID: 709076002}
-  - {fileID: 1010172567}
   - {fileID: 1790865013}
+  - {fileID: 1538041458}
+  - {fileID: 2020587052}

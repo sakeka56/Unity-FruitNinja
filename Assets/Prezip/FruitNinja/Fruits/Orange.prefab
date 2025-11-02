@@ -115,7 +115,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
@@ -154,5 +154,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
   SlicedFruit: {fileID: 5822990487296261168, guid: caf621741c0aa5c418196860563c04c7, type: 3}
   FruitJuice: {fileID: 7913760290513912320, guid: cac963213be2fa04988972b4619ffb95, type: 3}
-  FruitType: 2
+  fruitType: 2
   explosionForce: 50
+  score: 2

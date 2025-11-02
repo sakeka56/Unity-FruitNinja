@@ -3,6 +3,12 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     /// <summary>
+    /// 游戏帧率
+    /// </summary>
+    public int FPS = 60;
+
+
+    /// <summary>
     /// 胜利所需的分数
     /// </summary>
     public float WinScore;
@@ -29,13 +35,17 @@ public class GameManager : Singleton<GameManager>
         ScoreManager = new ScoreManager(WinScore);
 
 
-        this.EventManager.Register("OnSlicing", (ob) => Debug.Log(ob.GetType()));
+        this.EventManager.Register("OnSlicing", (ob) => { });
         this.EventManager.AddListener("OnSlicing",
             (ob) =>
             {
-                Debug.Log(ob.GetType()  + "+" + ((ICanSliceObject)ob).Score);
+                Debug.Log(  ((ICanSliceObject)ob).FruitType  + "+" + ((ICanSliceObject)ob).Score);
                 ScoreManager.AddScore(((ICanSliceObject)ob).Score);
             });
+
+
+
+        Application.targetFrameRate = FPS;
 
         Debug.Log("Game Manager Inited");
     }
