@@ -8,21 +8,27 @@ public class Bomb : MonoBehaviour,ICanSliceObject,IPoolable
     public FruitType FruitType { get; set; } = FruitType.Bomb;
 
     [SerializeField]
-    private float score = 0;
-    float ICanSliceObject.Score { get; set; }
+    private int score = 0;
+    int ICanSliceObject.Score { get; set; }
 
-    public float GetScore()
+    public int GetScore()
     {
         return ((ICanSliceObject)this).Score;
     }
 
-    private void SetScore(float score)
+    private void SetScore(int score)
     {
         ((ICanSliceObject)this).Score = score;
     }
 
     public void OnSlicing()
     {
+
+
+        //触发切割事件
+        GameManager.Instance.EventManager.TriggerEvent("OnSlicing", this);
+
+
         GameObject effect = null;
         //if(SlicedBombEffect != null) Instantiate(SlicedBombEffect, transform.position, transform.rotation);
         if (ExplosionEffect != null) 

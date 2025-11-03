@@ -27,15 +27,15 @@ public class Fruit : MonoBehaviour,ICanSliceObject,IPoolable
     private Rigidbody Rigidbody;
 
     [SerializeField]
-    private float score = 0;
-    float ICanSliceObject.Score { get; set; }
+    private int score = 0;
+    int ICanSliceObject.Score { get; set; }
 
-    public float GetScore()
+    public int GetScore()
     {
         return ((ICanSliceObject)this).Score;
     }
 
-    private void SetScore(float score)
+    private void SetScore(int score)
     {
         ((ICanSliceObject)this).Score = score;
     }

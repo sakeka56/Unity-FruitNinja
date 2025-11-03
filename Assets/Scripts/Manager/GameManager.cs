@@ -11,7 +11,12 @@ public class GameManager : Singleton<GameManager>
     /// <summary>
     /// 胜利所需的分数
     /// </summary>
-    public float WinScore;
+    public int WinScore;
+
+    /// <summary>
+    /// 连击最大延迟
+    /// </summary>
+    public float ComboMaxDelayTime;
 
 
     /// <summary>
@@ -23,6 +28,8 @@ public class GameManager : Singleton<GameManager>
     /// </summary>
     public ScoreManager ScoreManager { get; private set; }
 
+    public ComboManager ComboManager { get; private set; }
+
 
 
 
@@ -33,14 +40,16 @@ public class GameManager : Singleton<GameManager>
         base.Init();
         EventManager = new EventManager();
         ScoreManager = new ScoreManager(WinScore);
+        ComboManager = new ComboManager();
 
-
+        //注册切割事件
         this.EventManager.Register("OnSlicing", (ob) => { });
         this.EventManager.AddListener("OnSlicing",
             (ob) =>
             {
                 Debug.Log(  ((ICanSliceObject)ob).FruitType  + "+" + ((ICanSliceObject)ob).Score);
                 ScoreManager.AddScore(((ICanSliceObject)ob).Score);
+                ComboManager.IncrementCombo(ob);
             });
 
 

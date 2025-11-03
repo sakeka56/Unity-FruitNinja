@@ -6,7 +6,7 @@ public class ScoreManager : IManager
     /// <summary>
     /// 当前分数
     /// </summary>
-    public float Score
+    public int Score
     {
         get;
         private set;
@@ -15,7 +15,7 @@ public class ScoreManager : IManager
     /// <summary>
     /// 胜利所需分数
     /// </summary>
-    public float WinScore
+    public int WinScore
     {
         get;
         private set;
@@ -27,7 +27,7 @@ public class ScoreManager : IManager
 
     
 
-    public ScoreManager(float WinScore)
+    public ScoreManager(int WinScore)
     {
         this.WinScore = WinScore;
     }
@@ -37,7 +37,7 @@ public class ScoreManager : IManager
     /// </summary>
     /// <param name="score"></param>
     /// <returns></returns>
-    public float AddScore(float score)
+    public int AddScore(int score)
     {
         Score += score;
         return Score;
@@ -47,7 +47,7 @@ public class ScoreManager : IManager
     /// </summary>
     /// <param name="score"></param>
     /// <returns></returns>
-    public float SubScore(float score)
+    public int SubScore(int score)
     {
         Score -= score;
         return Score;
